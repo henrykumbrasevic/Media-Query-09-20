@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Satisfy&display=swap');
+
+:root{
+    --purple:#550499;
+    --whiteish: #ebebeb;
+    --hoverCLR:#490149;
+}
+header nav a, section h1, .imageText{
+font-family: "Inria Sans", sans-serif;
+}
+body{
+    margin: 0;
+}
+header h2{
+    color: var(--purple);
+    padding-left: 5rem;
+    font-family: "Satisfy", cursive;
+    font-size: 2.5rem;
+    margin: 0
+}
+header nav,header nav a{
+    display: flex; 
+}
+header nav{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--purple);
+    gap: 0.8vw;
+    min-width: 350px;
+    padding: 0.8vh;
+
+    margin: 0;
+    a{
+        color: var(--whiteish);
+        text-decoration: none;
+        font-size: 1.2rem;
+        border-radius: 20px;
+            padding: 0.5vw;
+        &:hover{
+            background-color: var(--hoverCLR);
+            transition: all 0.4s;
+        }
+    }
+}
+header figure{
+    margin: 0;
+    position: relative;
+        img{
+            min-width: 350px;
+            width: 100vw;
+            height: 30vh;
+            object-fit: cover;
+    }
+    .imageText{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-size: 2.5vw;
+        color: var(--whiteish);
+    }
+ }
+section h1{
+    text-align: center;
+    color: var(--purple);
+}
+figure{
+    text-align: center;
+}
+div > h3, p{
+    text-align: left;
+    font-family: "Inria Sans", sans-serif;
+}
+main figure div img{
+    width: 80vw;
+    height: 80vh;
+    text-align: center;
+    object-fit: cover;
+} 
+@media screen and (min-width: 768px) {
+    header nav{
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    header figure img{
+        height: 35vh;
+    }
+    main figure{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.25vw;
+    }
+    .mainFigure img{
+        width: 28vw;
+        height: 28vh;
+    }
+}
+@media screen and (min-width: 1400px){
+    .mainFigure img{
+        width: 17vw;
+        height: 17vh;
+        }
+        header figure img{
+            height: 45vh;
+        }
+}
+@media screen and (min-width: 2560px){
+    header figure img{
+        height: 55vh;
+    }
+    .mainFigure img{
+        width: 15vw;
+        height: 15vh;
+        object-fit: cover;
+}
+}
